@@ -4,14 +4,14 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="/workspace/skyline/lib/ojdbc6.jar"/>
+    <classPathEntry location="D:/WORKSPACE/cebcms/fbi-cebcms/lib/sqljdbc4.jar"/>
 
     <!--信息-->
     <context id="AllInfo" targetRuntime="MyBatis3">
-        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                        connectionURL="jdbc:oracle:thin:@localhost:1521:orcl"
-                        userId="fip"
-                        password="fip">
+        <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                        connectionURL="jdbc:sqlserver://localhost:1433;databaseName=cebweb"
+                        userId="sa"
+                        password="sa">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -40,18 +40,14 @@
 
         <!--平台类 -->
 
-        <table tableName="ptdept"/>
-        <table tableName="ptenudetail"/>
-        <table tableName="ptenumain"/>
-        <table tableName="pterror"/>
-        <table tableName="ptlogicact"/>
-        <table tableName="ptmenu"/>
-        <table tableName="ptoper"/>
-        <table tableName="ptoperrole"/>
-        <table tableName="ptresource"/>
-        <table tableName="ptrole"/>
-        <table tableName="ptroleres"/>
-
+        <table tableName="t_hrm_branch"/>
+        <table tableName="t_hrm_branch_dept"/>
+        <table tableName="t_hrm_dept_team"/>
+        <table tableName="t_hrm_newsmodel"/>
+        <table tableName="t_hrm_parameter"/>
+        <table tableName="t_hrm_staff_base_info"/>
+        <table tableName="t_hrm_news"/>
+        <table tableName="t_hrm_staff_permission"/>
     </context>
 
 </generatorConfiguration>
