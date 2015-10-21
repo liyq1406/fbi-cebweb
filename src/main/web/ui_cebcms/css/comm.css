@@ -1,5 +1,4 @@
-﻿/*@import url(tab.css);*/
-/*显现卡*/
+﻿/*显现卡*/
 .tabheadstyle{clear:both;height:30px;overflow:hidden;}
 .tabheadstyle dd{float:left;text-align:center;font-size:13px;height:30px;}
 .tabheadstyle dd.current{height:30px;} /* 当前选项卡标题样式，默认名：current */
@@ -38,16 +37,6 @@
 .tw_article .title{text-align:left;line-height:20px;}
 .tw_article .title a{font-weight:bold;padding-left:0px}
 .tw_article .introduct{padding:2px 5px 5px 0px;line-height:20px;color:#666666;}
-
-/*.hh_article{clear:both;}*/
-/*.hh_article li.tw{text-align:left;line-height:20px;border:1px dotted #cccccc;border-width:0 0 1px 0;padding:5px 0 5px 0;overflow:hidden;height:100%} /!*置顶通用样式*!/*/
-/*.hh_article .tw .pic{float:left;margin:5px 10px 5px 0;border:1px solid #dddddd;display:inline}*/
-/*.hh_article .tw .title{text-align:left;line-height:25px;}*/
-/*.hh_article .tw .title a{font-weight:bold;padding-left:0px;font-size:14px;color:#cc0000}*/
-/*.hh_article .tw .introduct{padding:2px 5px 5px 0px;line-height:20px;color:#666666;}*/
-/*.hh_article li.normal{clear:both;height:20px;padding:6px 0 2px 5px;text-align:left;overflow:hidden;}*/
-/*.hh_article .normal .title{float:left;text-align:left;padding:0 0 0 10px;background:url(../img/article_arrow.gif) no-repeat left center;}*/
-/*.hh_article .normal .date{float:right;color:#666666;padding-right:2px}*/
 
 .lanmupage .tw_article li{padding:1px 0 2px 0;}
 

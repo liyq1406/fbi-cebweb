@@ -1,0 +1,18 @@
+body,div,ul,li,a,img{margin: 0;padding: 0;}
+.slider{width: 400px;margin: 0px auto;position: relative;height: 268px;overflow: hidden;}
+.slider li{list-style: none;position: absolute;left: 0;top: 0;}
+.slider img{border: none;height: 300px;width: 400px;}
+.slider .slider_btn{position: absolute;height: 25px;width: 100%;bottom: 0;text-align: right;}
+.slider .slider_btn span{display: inline-block;width: 20px;height: 20px;line-height: 20px;text-align: center;margin-right: 2px;cursor: pointer;background: #999;color: #FFFFEF;border-radius: 15px;font-size: 12px}
+.slider .slider_btn .cur{background: #E4393C;}
+
+/**Ê×Ò³ÓÒ²àÍ¼Æ¬µ¯³ö²ãÑùÊ½***/
+.mask{height: 100%;width: 100%;filter:alpha(opacity:0);opacity: 0;background: #000;position: absolute;z-index:5;left: 0;top:0;display: -none;}
+.popup{background:#fff url(/ui_cebcms/images/image/loading.gif) no-repeat center;border: 10px solid #fff;position: absolute;z-index: 6;;overflow:-hidden;width: 320px;height: 240px;}
+.popup img{height: auto;width: auto;}
+.btn{position: absolute;right: 0;top:0;height: 100%;width: 50%;cursor: pointer;}
+.prev{left: 0;background: url(/ui_cebcms/images/image/lightbox-btn-prev.gif) no-repeat  0 50px;}
+.next{background: url(/ui_cebcms/images/image/lightbox-btn-next.gif) no-repeat  right 50px;}
+.popupBottom{position: relative;z-index: 3;margin-top:8px}
+.popupTitle{line-height: 18px;color: #543424;font-family: Arial;font-size: 12px;padding-right: 100px;}
+.popupClose{margin-right:15px;height: 22px;width: 66px;background: url(/ui_cebcms/images/image/lightbox-btn-close.gif) no-repeat;cursor: pointer;z-index: 4;position: absolute;top: 0px;right: 0;}
