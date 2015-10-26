@@ -9,10 +9,10 @@ import spark.servlet.SparkApplication;
 import static spark.Spark.after;
 
 /**
- * Â·ÓÉÈİÆ÷-×¢²áËùÓĞÂ·ÓÉºÍÎ´¶¨ÒåÂ·ÓÉ
- * ×¢Òâ£ºÇĞ¼ÉÔÚ´ËÈİÆ÷×¢²á¾ßÌåÂ·ÓÉµØÖ·
- * RouteMultiplexer ÓĞÈ¨Ö¸¶¨¸÷Â·ÓÉµÄÒµÎñÊµÏÖ·½Ê½(service)
- * ×÷Õß£ºzhangxiaobo
+ * è·¯ç”±å®¹å™¨-æ³¨å†Œæ‰€æœ‰è·¯ç”±å’Œæœªå®šä¹‰è·¯ç”±
+ * æ³¨æ„ï¼šåˆ‡å¿Œåœ¨æ­¤å®¹å™¨æ³¨å†Œå…·ä½“è·¯ç”±åœ°å€
+ * RouteMultiplexer æœ‰æƒæŒ‡å®šå„è·¯ç”±çš„ä¸šåŠ¡å®ç°æ–¹å¼(service)
+ * ä½œè€…ï¼šzhangxiaobo
  */
 public class RouteMultiplexer implements SparkApplication {
 
@@ -23,7 +23,7 @@ public class RouteMultiplexer implements SparkApplication {
 
         // SparkBase.awaitInitialization();
 
-        // Â·ÓÉÉ¨Ãè
+        // è·¯ç”±æ‰«æ
         routeScan();
 
         // TODO after filter (for all routes)...

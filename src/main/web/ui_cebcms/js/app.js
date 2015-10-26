@@ -3,7 +3,7 @@
  */
 'use strict'
 
-var app = angular.module("cebweb", [
+var app = angular.module("app", [
     "ui.router",
     "ui.bootstrap",
     "oc.lazyLoad",
@@ -24,11 +24,10 @@ app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider,$urlR
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load({
-                        //name: 'MetronicApp',
+                        name: 'app',
                         //insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
-                            //'assets/admin/pages/scripts/tasks.js',
-                            'ui_cebcms/js/controllers/controller.js'
+                            '/ui_cebcms/js/controllers/controller.js'
                         ]
                     });
                 }]

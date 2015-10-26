@@ -1,8 +1,8 @@
 package skyline.platform.route;
 
 /**
- * Â·ÓÉ×¢²á»ú
- * ×÷Õß£ºzhangxiaobo
+ * è·¯ç”±æ³¨å†Œæœº
+ * ä½œè€…ï¼šzhangxiaobo
  */
 public interface RouteRegister {
     static final String GET_METHOD = "GET:";
