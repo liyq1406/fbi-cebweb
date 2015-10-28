@@ -1,8 +1,8 @@
 /**
  * Created by Administrator on 2015/10/20.
  */
-alert("123123123");
-//????????????
+
+//首页右侧图片播放
 function slider(s){this.init.apply(this,arguments)}
 slider.prototype={
     init:function(s){
@@ -12,10 +12,10 @@ slider.prototype={
         this.bSpan=this.b.getElementsByTagName('span');
         this.len=this.l.length;
         this.iNum=1;
-        this.status();//???????
-        this.autoPlay();//???????
-        this.clickPlay();//??????????
-        this.suspensionPause();//??????????
+        this.status();//初始化状态
+        this.autoPlay();//自动播放
+        this.clickPlay();//点击按钮播放
+        this.suspensionPause();//鼠标悬浮暂停
     },
     clickPlay:function()
     {
@@ -117,7 +117,7 @@ slider.prototype={
 }
 var slide=new slider('slider');
 
-//????????
+//点击图片放大
 
 (function(win){
     function myslider(elem,isZoom,src){
@@ -131,7 +131,7 @@ var slide=new slider('slider');
         this.showPopup();
     };
     var slider=myslider.prototype;
-    //============?????????
+    //============显示弹出层
     slider.showPopup=function(){
         var self=this,
             img=this.aImages;
@@ -143,10 +143,10 @@ var slide=new slider('slider');
             }
         }
     };
-    //===========class??????
-    //params  s ????
-    //params  t ?????
-    //params  p  ?????????? dom????
+    //===========class获取元素
+    //params  s 类名
+    //params  t 节点名
+    //params  p  父辈以上节点 dom对象
     slider.$$=function(s,t,p){
         var aElement=(p||document).getElementsByTagName(t||'*'),
             reg=new RegExp('(^|\\s)'+s+'(\\s|$)'),
@@ -156,19 +156,19 @@ var slide=new slider('slider');
         };
         return aResult;
     };
-    //==============????????????
-    //params   src  ??·??
-    //params title  ???????
+    //==============创建弹出层展示
+    //params   src  图片路径
+    //params title  显示文字
     slider.createPopup=function(src,title){
-        var oPopup=document.createElement('div');//?????????
-        var oMask=document.createElement('div');//????
-        var oPrev=document.createElement('div');//????
-        var oNext=document.createElement('div');//?°??
-        var oBottom=document.createElement('div');//???????
-        var oTitle=document.createElement('div');//??????????
+        var oPopup=document.createElement('div');//弹出层外框
+        var oMask=document.createElement('div');//遮罩
+        var oPrev=document.createElement('div');//上按钮
+        var oNext=document.createElement('div');//下按钮
+        var oBottom=document.createElement('div');//底部盒子
+        var oTitle=document.createElement('div');//底部文字盒子
         var oTitleTxt=document.createElement('div');
-        var oClose=document.createElement('div');//???
-        var oImg=document.createElement('img');//??
+        var oClose=document.createElement('div');//关闭
+        var oImg=document.createElement('img');//图片
 
         oMask.className='mask';
         oPopup.className='popup';
@@ -255,7 +255,7 @@ var slide=new slider('slider');
         this.isZoom && this.mouseWheels();
         this.resizefn();
     };
-    //============????????С
+    //============重置窗口大小
     slider.resizefn=function(){
         if(!this.p)return;
         var self=this;
@@ -270,7 +270,7 @@ var slide=new slider('slider');
             self.mask.style.width=Math.max(self.mask.offsetWidth,viw)+'px';
         })
     };
-    //==============??????
+    //==============鼠标滚轮
     slider.mouseWheels=function(){
         this.addEvent(document,'mousewheel',wheel);
         this.addEvent(document,'DOMMouseScroll',wheel);
@@ -289,8 +289,8 @@ var slide=new slider('slider');
                 maxH=self.p.offsetHeight,
                 maxW=self.p.offsetWidth;
 
-            //FF detail ????С??0,???????0;
-            //IE wheelDelta ???????0,????С??0
+            //FF detail 往上小于0,往下大于0;
+            //IE wheelDelta 往上大于0,往下小于0
             flag=ev.wheelDelta ? ev.wheelDelta<0 : ev.detail>0;
 
             if(maxW>=viw || maxH>=vih){
@@ -299,7 +299,7 @@ var slide=new slider('slider');
 
             switch(flag)
             {
-                //????
+                //往下
                 case true:
                     if(h<150 || w<200)return;
                     h-=20;
@@ -308,7 +308,7 @@ var slide=new slider('slider');
                     t+=10;
                     isBeyond=false;
                     break;
-                default :  //????
+                default :  //往上
                     h+=20;
                     w+=nw;
                     l-=nw/2;
@@ -325,7 +325,7 @@ var slide=new slider('slider');
             return false;
         }
     };
-    //==============??????
+    //==============阻止冒泡
     slider.stopPropagation=function(){
         this.p.onclick=function(ev){
             var e=window.event||ev;
@@ -333,27 +333,27 @@ var slide=new slider('slider');
         }
     };
     //
-    //=============????
+    //=============隐藏
     slider.hide=function(o){
         o.style.display='none';
 
     };
-    //=============???
+    //=============显示
     slider.show=function(o){
         o.style.display='block';
     };
-    //==============?????
-    //params  o dom????
-    //params  type ???????
-    //params  fn   ???????
+    //==============绑定事件
+    //params  o dom对象
+    //params  type 事件类型
+    //params  fn   事件函数
     slider.addEvent=function(o,type,fn){
         return o.addEventListener ? o.addEventListener(type,fn,false) : o.attachEvent('on'+type,fn);
     };
-    //==============????????
+    //==============解除事件绑定
     slider.removeEvent=function(o,type,fn){
         return o.detachEvent ? o.detachEvent('on'+type,fn) : o.removeEventListener(type,fn);
     };
-    //==============???
+    //==============关闭
     slider.closes=function(){
         var self=this;
         document.onclick=this.close.onclick=function(){
@@ -367,7 +367,7 @@ var slide=new slider('slider');
             self.img.onload=null;
         };
     };
-    //==============????????
+    //==============点击上一张
     slider.prevs=function(){
         var self=this;
         this.prev.onclick=function(){
@@ -378,7 +378,7 @@ var slide=new slider('slider');
             self.clickSwitch(index);
         }
     };
-    //==============????????
+    //==============点击下一张
     slider.nexts=function(){
         var self=this;
         this.next.onclick=function(){
@@ -389,7 +389,7 @@ var slide=new slider('slider');
             self.clickSwitch(index);
         }
     };
-    //================????л????д???
+    //================点击切换公有代码
     slider.clickSwitch=function(i){
         var h=this.hide;
         h(this.prev);
@@ -400,11 +400,11 @@ var slide=new slider('slider');
         this.img.src=this.aImages[i].getAttribute(this.src);
         this.txt.innerHTML=this.aImages[i].getAttribute('_title');
     }
-    //=============???????
-    //params  o    dom????
-    //params  json ??б?
-    //params  fx   Boolean?
-    //params  fn   ???????,???
+    //=============缓冲运动
+    //params  o    dom对象
+    //params  json 散列表
+    //params  fx   Boolean值
+    //params  fn   回调函数,可选
     slider.move=function(o,json,fx,fn){
         var self=this;
         o.timer && clearInterval(o.timer);
@@ -431,9 +431,9 @@ var slide=new slider('slider');
             }
         },30)
     };
-    //=============?????????
-    //params  o    dom????
-    //params  attr ????
+    //=============获取元素样式
+    //params  o    dom对象
+    //params  attr 属性
     slider.css=function(o,attr,val){
         if(arguments.length==2){
             return o.currentStyle ? o.currentStyle[attr] : getComputedStyle(o,false)[attr];
@@ -444,7 +444,7 @@ var slide=new slider('slider');
         }
 
     };
-    //=============????????
+    //=============获取页面高度
     slider.getFullHeight=function(){
         var sh=document.body.scrollHeight,
             ch=document.documentElement.clientHeight;
@@ -454,11 +454,10 @@ var slide=new slider('slider');
 })(window);
 
 
-
 var taotao=new myslider('lightBox');
 
-//?????????????dom?????class,????????????????????? document (?????????);
-//?????????boolean ,??????????????? ,??????,???
-//?????????????????·??,??? '_src'  ???
+//第一个参数传入dom对象或class,如给页面所有图片加显示传入 document (注意别加引号);
+//第二个参数boolean ,是否开启鼠标滚轮缩放 ,默认开启,可选
+//第三个参数是图片真实路径,默认 '_src'  可选
 //lightBox.init(o,isZoom,src);
-//?????????????粻???С,?????????
+//注意要显示的图片尺寸不能太小,否则不好看了。
