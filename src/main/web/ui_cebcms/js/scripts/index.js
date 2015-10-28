@@ -1,8 +1,8 @@
 /**
  * Created by Administrator on 2015/10/20.
  */
-
-//Ê×Ò³ÓÒ²àÍ¼Æ¬²¥·Å
+alert("123123123");
+//????????????
 function slider(s){this.init.apply(this,arguments)}
 slider.prototype={
     init:function(s){
@@ -12,10 +12,10 @@ slider.prototype={
         this.bSpan=this.b.getElementsByTagName('span');
         this.len=this.l.length;
         this.iNum=1;
-        this.status();//³õÊ¼»¯×´Ì¬
-        this.autoPlay();//×Ô¶¯²¥·Å
-        this.clickPlay();//µã»÷°´Å¥²¥·Å
-        this.suspensionPause();//Êó±êĞü¸¡ÔİÍ£
+        this.status();//???????
+        this.autoPlay();//???????
+        this.clickPlay();//??????????
+        this.suspensionPause();//??????????
     },
     clickPlay:function()
     {
@@ -117,7 +117,7 @@ slider.prototype={
 }
 var slide=new slider('slider');
 
-//µã»÷Í¼Æ¬·Å´ó
+//????????
 
 (function(win){
     function myslider(elem,isZoom,src){
@@ -131,7 +131,7 @@ var slide=new slider('slider');
         this.showPopup();
     };
     var slider=myslider.prototype;
-    //============ÏÔÊ¾µ¯³ö²ã
+    //============?????????
     slider.showPopup=function(){
         var self=this,
             img=this.aImages;
@@ -143,10 +143,10 @@ var slide=new slider('slider');
             }
         }
     };
-    //===========class»ñÈ¡ÔªËØ
-    //params  s ÀàÃû
-    //params  t ½ÚµãÃû
-    //params  p  ¸¸±²ÒÔÉÏ½Úµã dom¶ÔÏó
+    //===========class??????
+    //params  s ????
+    //params  t ?????
+    //params  p  ?????????? dom????
     slider.$$=function(s,t,p){
         var aElement=(p||document).getElementsByTagName(t||'*'),
             reg=new RegExp('(^|\\s)'+s+'(\\s|$)'),
@@ -156,19 +156,19 @@ var slide=new slider('slider');
         };
         return aResult;
     };
-    //==============´´½¨µ¯³ö²ãÕ¹Ê¾
-    //params   src  Í¼Æ¬Â·¾¶
-    //params title  ÏÔÊ¾ÎÄ×Ö
+    //==============????????????
+    //params   src  ??Â·??
+    //params title  ???????
     slider.createPopup=function(src,title){
-        var oPopup=document.createElement('div');//µ¯³ö²ãÍâ¿ò
-        var oMask=document.createElement('div');//ÕÚÕÖ
-        var oPrev=document.createElement('div');//ÉÏ°´Å¥
-        var oNext=document.createElement('div');//ÏÂ°´Å¥
-        var oBottom=document.createElement('div');//µ×²¿ºĞ×Ó
-        var oTitle=document.createElement('div');//µ×²¿ÎÄ×ÖºĞ×Ó
+        var oPopup=document.createElement('div');//?????????
+        var oMask=document.createElement('div');//????
+        var oPrev=document.createElement('div');//????
+        var oNext=document.createElement('div');//?Â°??
+        var oBottom=document.createElement('div');//???????
+        var oTitle=document.createElement('div');//??????????
         var oTitleTxt=document.createElement('div');
-        var oClose=document.createElement('div');//¹Ø±Õ
-        var oImg=document.createElement('img');//Í¼Æ¬
+        var oClose=document.createElement('div');//???
+        var oImg=document.createElement('img');//??
 
         oMask.className='mask';
         oPopup.className='popup';
@@ -255,7 +255,7 @@ var slide=new slider('slider');
         this.isZoom && this.mouseWheels();
         this.resizefn();
     };
-    //============ÖØÖÃ´°¿Ú´óĞ¡
+    //============????????Ğ¡
     slider.resizefn=function(){
         if(!this.p)return;
         var self=this;
@@ -270,7 +270,7 @@ var slide=new slider('slider');
             self.mask.style.width=Math.max(self.mask.offsetWidth,viw)+'px';
         })
     };
-    //==============Êó±ê¹öÂÖ
+    //==============??????
     slider.mouseWheels=function(){
         this.addEvent(document,'mousewheel',wheel);
         this.addEvent(document,'DOMMouseScroll',wheel);
@@ -289,8 +289,8 @@ var slide=new slider('slider');
                 maxH=self.p.offsetHeight,
                 maxW=self.p.offsetWidth;
 
-            //FF detail ÍùÉÏĞ¡ÓÚ0,ÍùÏÂ´óÓÚ0;
-            //IE wheelDelta ÍùÉÏ´óÓÚ0,ÍùÏÂĞ¡ÓÚ0
+            //FF detail ????Ğ¡??0,???????0;
+            //IE wheelDelta ???????0,????Ğ¡??0
             flag=ev.wheelDelta ? ev.wheelDelta<0 : ev.detail>0;
 
             if(maxW>=viw || maxH>=vih){
@@ -299,7 +299,7 @@ var slide=new slider('slider');
 
             switch(flag)
             {
-                //ÍùÏÂ
+                //????
                 case true:
                     if(h<150 || w<200)return;
                     h-=20;
@@ -308,7 +308,7 @@ var slide=new slider('slider');
                     t+=10;
                     isBeyond=false;
                     break;
-                default :  //ÍùÉÏ
+                default :  //????
                     h+=20;
                     w+=nw;
                     l-=nw/2;
@@ -325,7 +325,7 @@ var slide=new slider('slider');
             return false;
         }
     };
-    //==============×èÖ¹Ã°Åİ
+    //==============??????
     slider.stopPropagation=function(){
         this.p.onclick=function(ev){
             var e=window.event||ev;
@@ -333,27 +333,27 @@ var slide=new slider('slider');
         }
     };
     //
-    //=============Òş²Ø
+    //=============????
     slider.hide=function(o){
         o.style.display='none';
 
     };
-    //=============ÏÔÊ¾
+    //=============???
     slider.show=function(o){
         o.style.display='block';
     };
-    //==============°ó¶¨ÊÂ¼ş
-    //params  o dom¶ÔÏó
-    //params  type ÊÂ¼şÀàĞÍ
-    //params  fn   ÊÂ¼şº¯Êı
+    //==============?????
+    //params  o dom????
+    //params  type ???????
+    //params  fn   ???????
     slider.addEvent=function(o,type,fn){
         return o.addEventListener ? o.addEventListener(type,fn,false) : o.attachEvent('on'+type,fn);
     };
-    //==============½â³ıÊÂ¼ş°ó¶¨
+    //==============????????
     slider.removeEvent=function(o,type,fn){
         return o.detachEvent ? o.detachEvent('on'+type,fn) : o.removeEventListener(type,fn);
     };
-    //==============¹Ø±Õ
+    //==============???
     slider.closes=function(){
         var self=this;
         document.onclick=this.close.onclick=function(){
@@ -367,7 +367,7 @@ var slide=new slider('slider');
             self.img.onload=null;
         };
     };
-    //==============µã»÷ÉÏÒ»ÕÅ
+    //==============????????
     slider.prevs=function(){
         var self=this;
         this.prev.onclick=function(){
@@ -378,7 +378,7 @@ var slide=new slider('slider');
             self.clickSwitch(index);
         }
     };
-    //==============µã»÷ÏÂÒ»ÕÅ
+    //==============????????
     slider.nexts=function(){
         var self=this;
         this.next.onclick=function(){
@@ -389,7 +389,7 @@ var slide=new slider('slider');
             self.clickSwitch(index);
         }
     };
-    //================µã»÷ÇĞ»»¹«ÓĞ´úÂë
+    //================????Ğ»????Ğ´???
     slider.clickSwitch=function(i){
         var h=this.hide;
         h(this.prev);
@@ -400,11 +400,11 @@ var slide=new slider('slider');
         this.img.src=this.aImages[i].getAttribute(this.src);
         this.txt.innerHTML=this.aImages[i].getAttribute('_title');
     }
-    //=============»º³åÔË¶¯
-    //params  o    dom¶ÔÏó
-    //params  json É¢ÁĞ±í
-    //params  fx   BooleanÖµ
-    //params  fn   »Øµ÷º¯Êı,¿ÉÑ¡
+    //=============???????
+    //params  o    dom????
+    //params  json ??Ğ±?
+    //params  fx   Boolean?
+    //params  fn   ???????,???
     slider.move=function(o,json,fx,fn){
         var self=this;
         o.timer && clearInterval(o.timer);
@@ -431,9 +431,9 @@ var slide=new slider('slider');
             }
         },30)
     };
-    //=============»ñÈ¡ÔªËØÑùÊ½
-    //params  o    dom¶ÔÏó
-    //params  attr ÊôĞÔ
+    //=============?????????
+    //params  o    dom????
+    //params  attr ????
     slider.css=function(o,attr,val){
         if(arguments.length==2){
             return o.currentStyle ? o.currentStyle[attr] : getComputedStyle(o,false)[attr];
@@ -444,7 +444,7 @@ var slide=new slider('slider');
         }
 
     };
-    //=============»ñÈ¡Ò³Ãæ¸ß¶È
+    //=============????????
     slider.getFullHeight=function(){
         var sh=document.body.scrollHeight,
             ch=document.documentElement.clientHeight;
@@ -457,8 +457,8 @@ var slide=new slider('slider');
 
 var taotao=new myslider('lightBox');
 
-//µÚÒ»¸ö²ÎÊı´«Èëdom¶ÔÏó»òclass,Èç¸øÒ³ÃæËùÓĞÍ¼Æ¬¼ÓÏÔÊ¾´«Èë document (×¢Òâ±ğ¼ÓÒıºÅ);
-//µÚ¶ş¸ö²ÎÊıboolean ,ÊÇ·ñ¿ªÆôÊó±ê¹öÂÖËõ·Å ,Ä¬ÈÏ¿ªÆô,¿ÉÑ¡
-//µÚÈı¸ö²ÎÊıÊÇÍ¼Æ¬ÕæÊµÂ·¾¶,Ä¬ÈÏ '_src'  ¿ÉÑ¡
+//?????????????dom?????class,????????????????????? document (?????????);
+//?????????boolean ,??????????????? ,??????,???
+//?????????????????Â·??,??? '_src'  ???
 //lightBox.init(o,isZoom,src);
-//×¢ÒâÒªÏÔÊ¾µÄÍ¼Æ¬³ß´ç²»ÄÜÌ«Ğ¡,·ñÔò²»ºÃ¿´ÁË¡£
+//?????????????ç²»???Ğ¡,?????????

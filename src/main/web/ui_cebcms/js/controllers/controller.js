@@ -5,7 +5,7 @@
 
 app.controller('newsController',['$scope','$http',function($scope,$http){
     $http.get('/platform/index/news').success(function(data) {
-        //$scope.datas= data;
+        $scope.datas= data;
     });
 
     //$http({

@@ -11,6 +11,8 @@ var app = angular.module("app", [
     "ngTouch",
     "ngResource",
     "ui.grid"
+
+
 ]);
 
 app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider,$urlRouterProvider){
@@ -27,7 +29,11 @@ app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider,$urlR
                         name: 'app',
                         //insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
+                            '/ui_cebcms/js/scripts/index.js',
+                            '/ui_cebcms/js/filters/subFilter.js',
+
                             '/ui_cebcms/js/controllers/controller.js'
+
                         ]
                     });
                 }]

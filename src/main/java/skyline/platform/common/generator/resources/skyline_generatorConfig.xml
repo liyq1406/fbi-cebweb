@@ -48,6 +48,7 @@
         <table tableName="t_hrm_staff_base_info"/>
         <table tableName="t_hrm_news"/>
         <table tableName="t_hrm_staff_permission"/>
+        <table tableName="t_hrm_images"/>
     </context>
 
 </generatorConfiguration>
