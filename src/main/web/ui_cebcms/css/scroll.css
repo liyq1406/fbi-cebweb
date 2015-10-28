@@ -1,0 +1,9 @@
+
+/* 这里是设置对联样式 */
+#leftDiv,#rightDiv{
+    width:100px; /* 宽度 */
+    height:250px; /* 高度 */
+    background-color:#e5e5e5; /* 背景颜色 */
+    border:1px solid #ddd; /* 边框样式 */
+    position:absolute; /* 绝对定位激活 */
+}

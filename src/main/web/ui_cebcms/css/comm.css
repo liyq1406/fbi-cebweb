@@ -1,4 +1,5 @@
-﻿/*显现卡*/
+﻿
+/*显现卡*/
 .tabheadstyle{clear:both;height:30px;overflow:hidden;}
 .tabheadstyle dd{float:left;text-align:center;font-size:13px;height:30px;}
 .tabheadstyle dd.current{height:30px;} /* 当前选项卡标题样式，默认名：current */
@@ -22,7 +23,7 @@
 .hh_article .normal{padding:0px;height:24px;line-height:24px;}
 .hh_article .normal .title{background:url(../images/image/li_icon.gif) no-repeat left 4px;}
 .hh_article .normal .title a{margin-left: 10px;}
-.hh_article .normal .data{float: right; color: #666}
+.hh_article .normal .data{float: right; color: #666;}
 #tw{text-align:left;line-height:20px;border:1px dotted #cccccc;border-width:0 0 1px 0;padding:5px 0 5px 0;overflow:hidden;height:100%}
 
 .article table td{text-align:center}

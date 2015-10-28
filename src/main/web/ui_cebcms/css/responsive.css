@@ -1,0 +1,62 @@
+#m_181{margin: 0px auto; }
+@media (min-width: 1200px){
+    #m_181{width: 95%;}
+    .top_box .top_box_inner p{
+        position: absolute;right: 20px;
+    }
+    /*通知公告*/
+    #module_182{width:630px;}
+    #module_182 .module_box_inner .module_title marquee{
+        width:490px ;
+    }
+    /*焦点新闻*/
+    #module_179 {width:340px;}
+    /*图片新闻*/
+    #module_content_181 .tpxw_div{width:978px;}
+    #m_181{width: 930px;}
+    #module_186{width:370px;}
+    #module_187{width:370px;}
+    #module_189{width:755px;}
+    #module_191{width:210px;float:right;margin:0 0 8px 0;border:0 solid #cccccc;overflow:hidden;}
+    #module_193{width:373px; float:left;margin:0 10px 8px 0;border:0 solid #cccccc;overflow:hidden;}
+    #module_194{width:373px; float:left;margin:0 10px 8px 0;border:0 solid #cccccc;overflow:hidden;}
+    #module_195{width:210px;float:right;margin:0 0 8px 0;border:0 solid #cccccc;overflow:hidden;}
+}
+@media (max-width: 1024px) {
+    /*时间*/
+    .top_box .top_box_inner p{ position: absolute;margin-left:730px; }
+    /*头部*/
+    .top_box{width:780px;}
+    /*center*/
+    .main_box_style{width: 780px;}
+    /*网站登录*/
+    #wzdl .menuWrap{margin-left: 800px;}
+    /*搜索*/
+    #m_181{width: 680px;}
+    #search_table{margin-left: 630px}
+    /*通知公告*/
+    #module_182{width:530px;}
+    #module_182 .module_box_inner .module_title marquee{width:390px ;  }
+
+
+    /*焦点新闻*/
+    #module_179 {width:240px;}
+    .slider{width: 280px;}
+    .slider img{width: 240px;}
+    /*图片新闻*/
+    #module_content_181 .tpxw_div{width:778px;}
+    #m_181{width: 730px;}
+    #module_186{width:377px;}
+    #module_187{width:377px;}
+    .tabcon2 dd{width:355px;}
+    #module_189{width:555px;}
+    .tabcon3 .dbgz-r{float:right;width:245px;}
+    #module_191{width:210px;position:relative;margin-left: 570px;}
+    #module_193{width:553px;position: relative;margin-top: -400px;}
+    #module_194{width:553px;position: relative;margin-top: 20px;}
+    .h-dbgz1{width:551px;}
+    #module_195{width:210px;position: relative;margin-top: -170px;margin-left: 570px;}
+    #toTop{height: 32px;width: 32px;}
+    .hh_article .normal .data{}
+
+}
